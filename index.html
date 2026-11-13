@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Journey to Remember ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="cinema">
+
+        <!-- Background -->
+        <div class="sky">
+            <div class="sun"></div>
+            <div class="cloud cloud1"></div>
+            <div class="cloud cloud2"></div>
+        </div>
+
+        <!-- Stars -->
+        <div class="stars" id="stars"></div>
+
+        <!-- Scene 1 -->
+        <section class="scene active" id="scene1">
+
+            <div class="station">
+                <div class="station-name">
+                    CENTRAL RAILWAY STATION
+                </div>
+
+                <div class="platform"></div>
+
+                <div class="boy waiting">
+                    <div class="head">
+                        <div class="hair"></div>
+                    </div>
+                    <div class="body"></div>
+                    <div class="legs"></div>
+                    <div class="bag"></div>
+                </div>
+
+                <div class="train arriving">
+                    <div class="train-window"></div>
+                    <div class="train-window second"></div>
+                    <div class="train-door"></div>
+                </div>
+
+                <div class="scene-caption">
+                    Every journey begins somewhere...
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Scene 2 -->
+        <section class="scene" id="scene2">
+
+            <div class="train-interior">
+
+                <div class="window">
+                    <div class="outside">
+                        <div class="land"></div>
+                        <div class="tree t1"></div>
+                        <div class="tree t2"></div>
+                        <div class="tree t3"></div>
+                    </div>
+                </div>
+
+                <div class="seat"></div>
+
+                <div class="boy seated">
+                    <div class="head">
+                        <div class="hair"></div>
+                    </div>
+                    <div class="body"></div>
+                    <div class="legs"></div>
+                </div>
+
+                <div class="scene-caption">
+                    A new destination awaits...
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Scene 3 -->
+        <section class="scene" id="scene3">
+
+            <div class="corridor">
+
+                <div class="corridor-light"></div>
+
+                <div class="door">
+                    <span>COACH B</span>
+                </div>
+
+                <div class="walking-boy">
+                    <div class="head">
+                        <div class="hair"></div>
+                    </div>
+                    <div class="body"></div>
+                    <div class="legs"></div>
+                </div>
+
+                <div class="scene-caption">
+                    Sometimes, a different path changes everything...
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Scene 4 -->
+        <section class="scene" id="scene4">
+
+            <div class="romantic-interior">
+
+                <div class="big-window">
+                    <div class="sunset"></div>
+                    <div class="moving-landscape"></div>
+                </div>
+
+                <div class="couple-seat"></div>
+
+                <div class="boy couple-boy">
+                    <div class="head">
+                        <div class="hair"></div>
+                    </div>
+                    <div class="body"></div>
+                    <div class="legs"></div>
+                </div>
+
+                <div class="girl">
+                    <div class="head girl-head">
+                        <div class="girl-hair"></div>
+                        <div class="eyes">
+                            <span></span><span></span>
+                        </div>
+                    </div>
+                    <div class="girl-body"></div>
+                    <div class="girl-legs"></div>
+                    <div class="hair-back"></div>
+                </div>
+
+                <div class="hearts">
+                    ❤️
+                </div>
+
+                <div class="scene-caption">
+                    An unexpected meeting...
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Scene 5 -->
+        <section class="scene" id="scene5">
+
+            <div class="romantic-interior night">
+
+                <div class="big-window">
+                    <div class="night-sky"></div>
+                    <div class="moon"></div>
+                    <div class="night-landscape"></div>
+                </div>
+
+                <div class="couple-seat"></div>
+
+                <div class="boy couple-boy">
+                    <div class="head">
+                        <div class="hair"></div>
+                    </div>
+                    <div class="body"></div>
+                    <div class="legs"></div>
+                </div>
+
+                <div class="girl">
+                    <div class="head girl-head">
+                        <div class="girl-hair"></div>
+                        <div class="eyes">
+                            <span></span><span></span>
+                        </div>
+                    </div>
+                    <div class="girl-body"></div>
+                    <div class="girl-legs"></div>
+                    <div class="hair-back"></div>
+                </div>
+
+                <div class="scene-caption">
+                    Two strangers. One beautiful journey.
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Scene 6 -->
+        <section class="scene" id="scene6">
+
+            <div class="ending">
+
+                <div class="station-lights"></div>
+
+                <div class="ending-train"></div>
+
+                <div class="ending-text">
+                    <h1>Some journeys never really end...</h1>
+                    <p>Sometimes, the most beautiful memories begin with a stranger.</p>
+                    <div class="heart">♥</div>
+                </div>
+
+                <button onclick="restartStory()">
+                    Watch Again ↻
+                </button>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+
+        <button id="playBtn" onclick="togglePlayback()">
+            ❚❚ Pause
+        </button>
+
+        <button id="soundBtn" onclick="toggleSound()">
+            🔊 Sound On
+        </button>
+
+        <button onclick="restartStory()">
+            ↻ Restart
+        </button>
+
+    </div>
+
+    <div class="progress">
+        <div id="progressBar"></div>
+    </div>
+
+    <audio id="trainAudio" loop preload="auto">
+        <source src="sounds/train.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
